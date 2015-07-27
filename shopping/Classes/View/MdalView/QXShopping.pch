@@ -1,0 +1,25 @@
+//
+//  QXShopping.pch
+//  QXShoppingChoose
+//
+//  Created by 崇庆旭 on 15/7/27.
+//  Copyright (c) 2015年 崇庆旭. All rights reserved.
+//
+
+#ifndef QXShoppingChoose_QXShopping_pch
+#define QXShoppingChoose_QXShopping_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import "const.h"
+//配置日志形式
+#ifdef DEBUG // 处于开发阶段
+#define QXLog(...) NSLog(@"%s \n Line:%d\n %@ \n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#else // 处于发布阶段
+#define QXLog(...)
+#endif
+
+
+#endif
